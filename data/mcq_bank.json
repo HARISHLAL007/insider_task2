@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "question": "What does OCR stand for?",
+    "options": ["Optical Character Recognition", "Open Command Run", "Output Control Register", "Optical Color Rendering"]
+  },
+  {
+    "id": 2,
+    "question": "Which Python library is used for OCR in this project?",
+    "options": ["pytesseract", "EasyOCR", "OpenCV", "Pillow"]
+  },
+  {
+    "id": 3,
+    "question": "What does TF-IDF stand for?",
+    "options": ["Term Frequency Inverse Document Frequency", "Text Format Image Detection Feature", "Token Filter Index Document File", "Total Frequency Index Data Format"]
+  },
+  {
+    "id": 4,
+    "question": "Which ML model is used for classifying lines in this project?",
+    "options": ["Logistic Regression", "Decision Tree", "KNN", "SVM"]
+  },
+  {
+    "id": 5,
+    "question": "What format is the MCQ dataset stored in?",
+    "options": ["JSON", "CSV", "XML", "SQL"]
+  },
+  {
+    "id": 6,
+    "question": "What does NLP stand for?",
+    "options": ["Natural Language Processing", "Neural Link Protocol", "Numeric Logic Programming", "Network Layer Processing"]
+  },
+  {
+    "id": 7,
+    "question": "Which of the following is NOT a Python data type?",
+    "options": ["int", "float", "char", "list"]
+  },
+  {
+    "id": 8,
+    "question": "What is the output of len('hello')?",
+    "options": ["4", "5", "6", "Error"]
+  },
+  {
+    "id": 9,
+    "question": "Which library is used for image processing in this project?",
+    "options": ["OpenCV", "Matplotlib", "Seaborn", "Pygame"]
+  },
+  {
+    "id": 10,
+    "question": "What does ML stand for?",
+    "options": ["Machine Learning", "Multi Layer", "Model Logic", "Memory Lookup"]
+  },
+  {
+    "id": 11,
+    "question": "Which of the following is a classification algorithm?",
+    "options": ["Linear Regression", "Logistic Regression", "K-Means", "PCA"]
+  },
+  {
+    "id": 12,
+    "question": "What is a corpus in NLP?",
+    "options": ["A large collection of text data", "A type of neural network", "An image dataset", "A Python library"]
+  },
+  {
+    "id": 13,
+    "question": "Which file extension is used for Python files?",
+    "options": [".py", ".pt", ".pyt", ".python"]
+  },
+  {
+    "id": 14,
+    "question": "What does JSON stand for?",
+    "options": ["JavaScript Object Notation", "Java Structured Output Notation", "JavaScript Ordered Network", "Java Serial Object Name"]
+  },
+  {
+    "id": 15,
+    "question": "Which of the following is used to save a trained ML model in Python?",
+    "options": ["joblib", "pickle only", "json", "csv"]
+  }
+]
