@@ -30,7 +30,8 @@ def run_quiz(questions):
     print(f"  {total} questions | Type a, b, c, or d\n")
 
     for i, mcq in enumerate(selected):
-        print(f"Q{i+1}. {mcq['question']}")
+        source = mcq.get("source", "unknown")
+        print(f"Q{i+1}. [{source}] {mcq['question']}")
 
         # Track correct answer BEFORE shuffling
         correct_answer = mcq["options"][0]

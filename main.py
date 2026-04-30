@@ -21,10 +21,11 @@ def load_existing_bank(path):
         return []
 
 
-def merge_mcqs(existing, new_mcqs):
+def merge_mcqs(existing, new_mcqs, source_image="unknown"):
     """
     Merge new MCQs into existing bank.
     Deduplicates by normalised question text so the same question is never added twice.
+    Stamps each new MCQ with a 'source' field tracking which image it came from.
     Re-assigns IDs sequentially after merging.
     """
     existing_questions = {q["question"].strip().lower() for q in existing}
@@ -32,6 +33,7 @@ def merge_mcqs(existing, new_mcqs):
     for mcq in new_mcqs:
         key = mcq["question"].strip().lower()
         if key not in existing_questions:
+            mcq["source"] = os.path.basename(source_image)
             existing.append(mcq)
             existing_questions.add(key)
             added += 1
@@ -75,7 +77,7 @@ def main():
     new_mcqs = process_lines(clean_lines)
 
     if new_mcqs:
-        merged, added = merge_mcqs(existing_mcqs, new_mcqs)
+        merged, added = merge_mcqs(existing_mcqs, new_mcqs, source_image=image_path)
         print(f"{len(new_mcqs)} MCQs extracted from image. {added} are new (not duplicates).")
         save_mcq_bank(merged, MCQ_BANK_PATH)
         print(f"Bank now has {len(merged)} questions total.")
