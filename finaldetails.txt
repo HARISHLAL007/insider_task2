@@ -1,0 +1,60 @@
+==================================================
+   MCQ EXTRACTOR & QUIZ GENERATOR - PROJECT DETAILS
+==================================================
+
+1. OVERVIEW
+-----------
+This project is an automated pipeline designed to transform physical or scanned MCQ (Multiple Choice Question) papers into a digital, interactive quiz format. It automates text extraction, question-option classification, and data storage.
+
+2. WHAT IT DOES
+---------------
+- Processes images (JPG/PNG) of question papers.
+- Enhances image quality for better OCR accuracy.
+- Extracts all text from the image.
+- Intelligent Parser: Detects which lines are questions and which are options.
+- Data Bank: Stores extracted MCQs in a structured JSON format (data/mcq_bank.json).
+- Cumulative Learning: Automatically merges new questions from different images into the same bank while preventing duplicates.
+- Interactive Quiz: Runs a random 10-question quiz from the accumulated bank with score tracking.
+
+3. HOW IT WORKS (THE PIPELINE)
+------------------------------
+A. IMAGE ENHANCEMENT: Uses OpenCV to grayscale and threshold images to maximize OCR readability.
+B. OCR ENGINE: Uses PaddleOCR to detect and recognize text lines with high precision.
+C. PREPROCESSING: Cleans OCR artifacts, merges dangling labels (like floating 'a)' or '1.'), and normalizes punctuation.
+D. CLASSIFICATION: A rule-based engine categorizes lines into 'question', 'option', or 'noise'.
+E. PARSING: Groups classified lines into MCQ objects. It handles multi-line questions and varying option layouts.
+F. DEDUPLICATION: Ensures the same question isn't added twice if the same image is scanned multiple times.
+G. QUIZ ENGINE: Shuffles options for fairness, tracks correct answers, and calculates a final score.
+
+4. WHY THIS PROJECT?
+--------------------
+Manually typing out questions from a printed sheet is tedious and prone to error. This project provides a "Scan-to-Quiz" experience, making it useful for students and teachers to quickly digitize study materials.
+
+5. TECH STACK
+-------------
+- Language: Python 3.9
+- OCR: PaddleOCR v2.9.1 (PP-OCRv4 models)
+- Core Engine: PaddlePaddle 2.6.2
+- Image Processing: OpenCV (cv2)
+- Data Storage: JSON (Atomic writes for safety)
+- Logic: Regular Expressions (re), Logging, and Multi-phase Parsing.
+
+6. OCR DETAILS
+--------------
+- Type: PaddleOCR (Deep Learning based OCR)
+- Models: Uses PP-OCRv4 for high accuracy on English text.
+- Feature: Supports multi-line detection and handles complex layouts including vertical alignment of options.
+
+7. FILE STRUCTURE
+-----------------
+- main.py: The main entry point to run the pipeline.
+- OCR.py: Handles image processing and PaddleOCR calls.
+- preprocessing.py: Cleans and merges raw OCR text.
+- classifier.py: Labels lines (Question/Option/Noise).
+- mcq_parser.py: Groups lines into JSON objects.
+- quiz.py: The interactive quiz logic.
+- data/mcq_bank.json: The persistent storage for all questions.
+
+==================================================
+Generated on: 2026-05-01
+==================================================
