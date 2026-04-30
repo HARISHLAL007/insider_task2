@@ -308,5 +308,70 @@
       "$10,000 of corporate bonds"
     ],
     "source": "thisisfinal.png"
+  },
+  {
+    "id": 29,
+    "question": "1n Bcst-First BB (minimization). thc live node list is: N1(LB=10), N2(LB=7), N3(LB=12),",
+    "options": [
+      "N1 is cxpanded (first inscrted with LB=10)",
+      "N2 is cxpanded (lowest LB, inserted bcfore N4).",
+      "Eithcr N2 or N4 may bc expanded --- tic-breaking is implementation defined.",
+      "N3 is cxpanded (highest LB signals most constraine",
+      "It is invalid because TSP requires visiting cities in numerical order only."
+    ],
+    "source": "realtesting.jpg"
+  },
+  {
+    "id": 30,
+    "question": "It is invalid because (1-2) and (3-4) form two disconnected subtours and cannot be",
+    "options": [
+      "it is valid because adding edges (2-3) and (4--1) completes a Hamiltonian cycle visiting all-",
+      "It is invalid because Branch and Bound never allows partial solutions to be extended"
+    ],
+    "source": "realtesting.jpg"
+  },
+  {
+    "id": 31,
+    "question": "In a simple graph G, the size of the minimum vertex cover is 9 and the size of the maximum",
+    "options": [
+      "Cannot be determined",
+      "22"
+    ],
+    "source": "realtesting.jpg"
+  },
+  {
+    "id": 32,
+    "question": "Tte 3-SAT problem reduces to a decision problem II in polynomial time. Which of the following can be infenred from this reduction ?",
+    "options": [
+      "II is NP but not NP Complete.",
+      "II is NP hard but may not be NP Complete.",
+      "II is neither NP hard nor in NP",
+      "II is NP Complete"
+    ],
+    "source": "realtesting.jpg"
+  },
+  {
+    "id": 33,
+    "question": "true?",
+    "options": [
+      "W'e can find in time polynomial in n, whether there is a subset of at most n/3 vertices that",
+      "W'e can find in time polynomial in n, whether there is a subset of at least n/3 vertices that forms",
+      "Both (",
+      "and (",
+      "Nciuicr of (",
+      "and ("
+    ],
+    "source": "realtesting.jpg"
+  },
+  {
+    "id": 34,
+    "question": "Y: Maximum independent set can be found in polynomial time if the input graph is a",
+    "options": [
+      "Both X and Y are truc",
+      "Both X and Y are false",
+      "Only X is true",
+      "Only Y is true"
+    ],
+    "source": "realtesting.jpg"
   }
 ]
