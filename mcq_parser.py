@@ -61,7 +61,7 @@ def parse_classified(classified: list[tuple[str, str]]) -> list[dict]:
         question_text = strip_question_number(question_text)
         if not question_text:
             return None
-        if len(opts) < 4:
+        if len(opts) < 2:
             return None
         return {
             'question': question_text,
@@ -141,11 +141,21 @@ def process_lines(lines: list[str]) -> list[dict]:
 # ─────────────────────────────────────────────
 
 def save_mcq_bank(mcqs: list[dict], path: str = 'data/mcq_bank.json') -> None:
-    """Write MCQs to JSON file. Creates parent directories if needed."""
-    os.makedirs(os.path.dirname(path) if os.path.dirname(path) else '.', exist_ok=True)
-    with open(path, 'w', encoding='utf-8') as f:
-        json.dump(mcqs, f, indent=2, ensure_ascii=False)
-    print(f"[parser] Saved {len(mcqs)} MCQs → {path}")
+    """Write MCQs to JSON file atomically. Creates parent directories if needed."""
+    import tempfile
+    dir_name = os.path.dirname(path) if os.path.dirname(path) else '.'
+    os.makedirs(dir_name, exist_ok=True)
+    # Write to a temp file first, then rename so the bank is never left empty
+    tmp_fd, tmp_path = tempfile.mkstemp(dir=dir_name, suffix='.tmp')
+    try:
+        with os.fdopen(tmp_fd, 'w', encoding='utf-8') as f:
+            json.dump(mcqs, f, indent=2, ensure_ascii=False)
+        os.replace(tmp_path, path)
+        print(f"[parser] Saved {len(mcqs)} MCQs to {path}")
+    except Exception as e:
+        os.unlink(tmp_path)
+        print(f"[parser] ERROR saving MCQ bank: {e}")
+        raise
 
 
 # ─────────────────────────────────────────────
