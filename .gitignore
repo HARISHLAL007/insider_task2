@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+.env/
+
+# PaddleOCR model cache (large files, re-downloaded on first run)
+.paddleocr/
+.paddlex/
+
+# Paddle model outputs
+inference_results/
+output/
+log_output/
+
+# Temp files
+*.tmp
+ocr_dump.txt
+dump_ocr.py
