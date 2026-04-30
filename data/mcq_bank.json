@@ -243,5 +243,70 @@
       "Brtam"
     ],
     "source": "finallytesting.jpg"
+  },
+  {
+    "id": 23,
+    "question": "A country's investment can be financed by",
+    "options": [
+      "a government budget surplus.",
+      "making exports exceed Imports.",
+      "onty saving by households and firms.",
+      "nationat saving and foregn borrowing ."
+    ],
+    "source": "thisisfinal.png"
+  },
+  {
+    "id": 24,
+    "question": "When the inflation rate is zero. the",
+    "options": [
+      "reat interest rate is greater than the nominal interest rate.",
+      "real interest rate is less than the norminal Interest rate..",
+      "nominal interest rate is zero.",
+      "real interest rate cquals the nominal interest rate."
+    ],
+    "source": "thisisfinal.png"
+  },
+  {
+    "id": 25,
+    "question": "In January 2008, Tim's Gyms, Inc. owned machines valued at $1 mitlion. Durlng tho",
+    "options": [
+      "$1 milion",
+      "$900,000",
+      "$300.000",
+      "$200,000."
+    ],
+    "source": "thisisfinal.png"
+  },
+  {
+    "id": 26,
+    "question": "Wnich of the followtng is a prmary function of money?.",
+    "options": [
+      "to serve as a unit of account",
+      "to serve as an encouragement to work",
+      "to reduce the burden of excessive imports",
+      "to raise funds for the government"
+    ],
+    "source": "thisisfinal.png"
+  },
+  {
+    "id": 27,
+    "question": "A BD10 price tag on a shirt ls an example of money as.",
+    "options": [
+      "a unit of account",
+      "a medium of exchange.",
+      "a store of value."
+    ],
+    "source": "thisisfinal.png"
+  },
+  {
+    "id": 28,
+    "question": "Wnich of the following counts as part of money?",
+    "options": [
+      "$10,000 of gold bars.",
+      "$10.000 of govemment bonds",
+      "$10.000 in a checking account",
+      "$10,000 of corporate bonds"
+    ],
+    "source": "thisisfinal.png"
   }
 ]
